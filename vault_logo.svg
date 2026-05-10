@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e8d5a3;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#c9a84c;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8b6914;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="goldGrad2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#e8d5a3;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c9a84c;stop-opacity:0.5" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Coffre-fort hexagonal -->
+  <!-- Corps principal hexagone -->
+  <polygon points="100,15 165,52 165,128 100,165 35,128 35,52"
+    fill="#0a0a0a" stroke="url(#goldGrad)" stroke-width="2" filter="url(#glow)"/>
+
+  <!-- Bord intérieur hexagone -->
+  <polygon points="100,25 155,58 155,122 100,155 45,122 45,58"
+    fill="none" stroke="url(#goldGrad)" stroke-width="0.8" opacity="0.4"/>
+
+  <!-- Cercle central de la serrure -->
+  <circle cx="100" cy="90" r="32" fill="#0e0e0e" stroke="url(#goldGrad)" stroke-width="1.5" filter="url(#glow)"/>
+  <circle cx="100" cy="90" r="24" fill="none" stroke="url(#goldGrad)" stroke-width="0.8" opacity="0.5"/>
+
+  <!-- Poignée de la serrure -->
+  <circle cx="100" cy="90" r="8" fill="url(#goldGrad)" filter="url(#glow)"/>
+  <circle cx="100" cy="90" r="4" fill="#0a0a0a"/>
+
+  <!-- Lignes rayonnantes de la serrure -->
+  <line x1="100" y1="58" x2="100" y2="66" stroke="url(#goldGrad)" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="100" y1="114" x2="100" y2="122" stroke="url(#goldGrad)" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="68" y1="90" x2="76" y2="90" stroke="url(#goldGrad)" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="124" y1="90" x2="132" y2="90" stroke="url(#goldGrad)" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="77" y1="67" x2="83" y2="73" stroke="url(#goldGrad)" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="117" y1="107" x2="123" y2="113" stroke="url(#goldGrad)" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="123" y1="67" x2="117" y2="73" stroke="url(#goldGrad)" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="83" y1="107" x2="77" y2="113" stroke="url(#goldGrad)" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- Charnières gauche -->
+  <rect x="35" y="65" width="8" height="12" rx="2" fill="url(#goldGrad2)" stroke="url(#goldGrad)" stroke-width="0.8"/>
+  <rect x="35" y="103" width="8" height="12" rx="2" fill="url(#goldGrad2)" stroke="url(#goldGrad)" stroke-width="0.8"/>
+
+  <!-- Poignée droite -->
+  <rect x="148" y="83" width="6" height="14" rx="3" fill="url(#goldGrad)" filter="url(#glow)"/>
+
+  <!-- Losanges décoratifs coins -->
+  <polygon points="100,8 106,14 100,20 94,14" fill="none" stroke="url(#goldGrad)" stroke-width="0.8" opacity="0.6"/>
+  <polygon points="100,172 106,178 100,184 94,178" fill="none" stroke="url(#goldGrad)" stroke-width="0.8" opacity="0.4"/>
+
+  <!-- Points LED -->
+  <circle cx="120" cy="130" r="3" fill="#c9a84c" opacity="0.8" filter="url(#glow)"/>
+  <circle cx="130" cy="130" r="2" fill="#c9a84c" opacity="0.5"/>
+
+  <!-- Trait déco bas -->
+  <line x1="65" y1="145" x2="135" y2="145" stroke="url(#goldGrad)" stroke-width="0.5" opacity="0.3"/>
+
+</svg>
